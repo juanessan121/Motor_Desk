@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <!-- Suelo y marco derivados del plano del kit. Sin bahías ni vehículos ficticios:
+       las zonas y puestos se superponen desde las geometrías guardadas. -->
+  <rect width="1400" height="900" rx="36" fill="#151F2B"/>
+  <rect x="31" y="31" width="1338" height="838" rx="20" fill="#2B3743" stroke="#788B97" stroke-width="7"/>
+  <g fill="none" stroke="#4E5F69" stroke-width="2" opacity="0.25">
+    <path d="M100 50V850M200 50V850M300 50V850M400 50V850M500 50V850M600 50V850M700 50V850M800 50V850M900 50V850M1000 50V850M1100 50V850M1200 50V850M1300 50V850"/>
+    <path d="M50 100H1350M50 200H1350M50 300H1350M50 400H1350M50 500H1350M50 600H1350M50 700H1350M50 800H1350"/>
+  </g>
+  <path d="M650 858H750" fill="none" stroke="#54C6B9" stroke-width="12" stroke-linecap="round"/>
+</svg>

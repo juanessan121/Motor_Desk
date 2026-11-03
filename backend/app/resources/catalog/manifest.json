@@ -1,0 +1,22 @@
+{
+  "vehicles.sqlite": {
+    "url": "https://raw.githubusercontent.com/gor3a/vehicle-makes-models/main/data/vehicles.sqlite",
+    "sha256": "4f7e8aa7655238451c720487aecda506c36491fb1451b1d45cb56719c102d170",
+    "bytes": 59826176
+  },
+  "part_terms.json": {
+    "url": "https://raw.githubusercontent.com/lifeofcapo/car-api/main/car-parts.json",
+    "sha256": "749c21daec549c98cfae7f0bc78cad00fe8f25be7da321a7e1cdda2ca2a55d9d",
+    "bytes": 172718
+  },
+  "LICENSE-vehicles.txt": {
+    "url": "https://raw.githubusercontent.com/gor3a/vehicle-makes-models/main/LICENSE-DATA",
+    "sha256": "929002c598eb35029cbcd8fc40a9c47626da4d13eda06bba25cbafba531b8cb8",
+    "bytes": 1648
+  },
+  "LICENSE-parts.txt": {
+    "url": "https://raw.githubusercontent.com/lifeofcapo/car-api/main/LICENSE",
+    "sha256": "da35be985aa62cb9dff02f0bbd1e113647ee3fcb1e68d02a942b0dbb0643383e",
+    "bytes": 1067
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MotorDeskWorkshopData",
+  "description": "Esquema JSON que define la estructura de exportación completa del sistema MotorDesk (Fases 1 a 5)",
+  "type": "object",
+  "required": [
+    "metadatos",
+    "clientes",
+    "vehiculos",
+    "mantenimientos",
+    "seguimiento_estados",
+    "notificaciones"
+  ],
+  "properties": {
+    "metadatos": {
+      "type": "object",
+      "required": [
+        "sistema",
+        "version",
+        "fecha_exportacion",
+        "taller_id",
+        "nombre_taller",
+        "generado_por"
+      ],
+      "properties": {
+        "sistema": { "type": "string" },
+        "version": { "type": "string" },
+        "fecha_exportacion": { "type": "string", "format": "date-time" },
+        "taller_id": { "type": "integer" },
+        "nombre_taller": { "type": "string" },
+        "generado_por": { "type": "string" }
+      }
+    },
+    "clientes": {
+      "type": "array",
+      "description": "Fase 1: Registro de clientes con WhatsApp, datos de contacto y estado de acceso al portal",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "cedula_ruc",
+          "nombre_completo",
+          "email",
+          "telefono",
+          "whatsapp",
+          "acceso_portal",
+          "canales_notificacion"
+        ],
+        "properties": {
+          "id": { "type": "integer" },
+          "cedula_ruc": { "type": "string" },
+          "nombre_completo": { "type": "string" },
+          "email": { "type": "string" },
+          "telefono": { "type": "string" },
+          "whatsapp": { "type": ["string", "null"] },
+          "direccion": { "type": ["string", "null"] },
+          "acceso_portal": {
+            "type": "object",
+            "required": ["tiene_acceso", "estado"],
+            "properties": {
+              "tiene_acceso": { "type": "boolean" },
+              "estado": {
+                "type": "string",
+                "enum": ["sin_cuenta", "pendiente_activacion", "activo", "deshabilitado"]
+              },
+              "usuario": { "type": ["string", "null"] }
+            }
+          },
+          "canales_notificacion": {
+            "type": "object",
+            "required": [
+              "email_habilitado",
+              "telegram_habilitado",
+              "whatsapp_habilitado"
+            ],
+            "properties": {
+              "email_habilitado": { "type": "boolean" },
+              "telegram_habilitado": { "type": "boolean" },
+              "whatsapp_habilitado": { "type": "boolean" },
+              "telegram_chat_id": { "type": ["string", "null"] },
+              "canal_preferido": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "vehiculos": {
+      "type": "array",
+      "description": "Fase 2: Registro de vehículos automotrices con color, combustible y kilometraje",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "placa",
+          "marca",
+          "modelo",
+          "anio",
+          "color",
+          "tipo_combustible",
+          "kilometraje",
+          "propietario"
+        ],
+        "properties": {
+          "id": { "type": "integer" },
+          "placa": { "type": "string" },
+          "marca": { "type": "string" },
+          "modelo": { "type": "string" },
+          "anio": { "type": "integer" },
+          "vin": { "type": ["string", "null"] },
+          "color": { "type": "string" },
+          "tipo_combustible": { "type": "string" },
+          "kilometraje": { "type": "integer" },
+          "propietario": {
+            "type": "object",
+            "required": ["cliente_id", "nombre", "cedula_ruc"],
+            "properties": {
+              "cliente_id": { "type": "integer" },
+              "nombre": { "type": ["string", "null"] },
+              "cedula_ruc": { "type": ["string", "null"] }
+            }
+          }
+        }
+      }
+    },
+    "mantenimientos": {
+      "type": "array",
+      "description": "Fase 3: Mantenimientos y órdenes con desglose de costos (mano de obra, repuestos, IVA 15%) y checklist",
+      "items": {
+        "type": "object",
+        "required": [
+          "orden_id",
+          "codigo_orden",
+          "vehiculo",
+          "cliente",
+          "tipo_mantenimiento",
+          "titulo",
+          "costos",
+          "observaciones",
+          "fechas",
+          "actividades_incluidas"
+        ],
+        "properties": {
+          "orden_id": { "type": "integer" },
+          "codigo_orden": { "type": "string" },
+          "vehiculo": {
+            "type": "object",
+            "required": ["id", "placa", "marca_modelo"],
+            "properties": {
+              "id": { "type": "integer" },
+              "placa": { "type": "string" },
+              "marca_modelo": { "type": "string" }
+            }
+          },
+          "cliente": {
+            "type": "object",
+            "required": ["id"],
+            "properties": {
+              "id": { "type": "integer" },
+              "nombre": { "type": ["string", "null"] },
+              "cedula_ruc": { "type": ["string", "null"] }
+            }
+          },
+          "tipo_mantenimiento": { "type": "string" },
+          "titulo": { "type": "string" },
+          "descripcion_problema": { "type": ["string", "null"] },
+          "diagnostico_tecnico": { "type": ["string", "null"] },
+          "costos": {
+            "type": "object",
+            "required": [
+              "mano_obra",
+              "repuestos",
+              "subtotal",
+              "porcentaje_iva",
+              "monto_iva",
+              "total"
+            ],
+            "properties": {
+              "mano_obra": { "type": "number" },
+              "repuestos": { "type": "number" },
+              "subtotal": { "type": "number" },
+              "porcentaje_iva": { "type": "number" },
+              "monto_iva": { "type": "number" },
+              "total": { "type": "number" }
+            }
+          },
+          "observaciones": {
+            "type": "object",
+            "properties": {
+              "observaciones_vehiculo": { "type": ["string", "null"] },
+              "observaciones_orden": { "type": ["string", "null"] },
+              "motivo_retraso": { "type": ["string", "null"] }
+            }
+          },
+          "fechas": {
+            "type": "object",
+            "required": ["creacion"],
+            "properties": {
+              "creacion": { "type": "string", "format": "date-time" },
+              "estimada_entrega": { "type": ["string", "null"] },
+              "entrega_real": { "type": ["string", "null"] }
+            }
+          },
+          "actividades_incluidas": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "nombre", "sistema", "estado"],
+              "properties": {
+                "id": { "type": "integer" },
+                "nombre": { "type": "string" },
+                "sistema": { "type": "string" },
+                "estado": { "type": "string" },
+                "notas_tecnicas": { "type": ["string", "null"] },
+                "posicion": { "type": "integer" },
+                "requerido": { "type": "boolean" },
+                "mecanico_asignado": { "type": ["string", "null"] }
+              }
+            }
+          }
+        }
+      }
+    },
+    "seguimiento_estados": {
+      "type": "array",
+      "description": "Fase 4: Seguimiento del ciclo de vida de los vehículos en 7 estados automotrices",
+      "items": {
+        "type": "object",
+        "required": [
+          "orden_id",
+          "codigo_orden",
+          "placa",
+          "estado_actual",
+          "estado_academico",
+          "etapa_operativa",
+          "es_activo",
+          "flujo_7_estados"
+        ],
+        "properties": {
+          "orden_id": { "type": "integer" },
+          "codigo_orden": { "type": "string" },
+          "placa": { "type": "string" },
+          "estado_actual": { "type": "string" },
+          "estado_academico": {
+            "type": "string",
+            "enum": [
+              "recepcionado",
+              "diagnostico",
+              "esperando_repuestos",
+              "en_reparacion",
+              "control_calidad",
+              "listo_para_entrega",
+              "entregado"
+            ]
+          },
+          "etapa_operativa": { "type": "string" },
+          "es_activo": { "type": "boolean" },
+          "flujo_7_estados": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["estado", "alcanzado"],
+              "properties": {
+                "estado": {
+                  "type": "string",
+                  "enum": [
+                    "recepcionado",
+                    "diagnostico",
+                    "esperando_repuestos",
+                    "en_reparacion",
+                    "control_calidad",
+                    "listo_para_entrega",
+                    "entregado"
+                  ]
+                },
+                "alcanzado": { "type": "boolean" },
+                "fecha": { "type": ["string", "null"] }
+              }
+            }
+          }
+        }
+      }
+    },
+    "notificaciones": {
+      "type": "array",
+      "description": "Fase 5: Registro de notificaciones generadas (Recepción, Vehículo listo, Información de pago)",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "destinatario",
+          "canal",
+          "evento_tipo",
+          "asunto",
+          "mensaje",
+          "estado",
+          "fecha_creacion"
+        ],
+        "properties": {
+          "id": { "type": "integer" },
+          "orden_id": { "type": ["integer", "null"] },
+          "destinatario": { "type": "string" },
+          "canal": { "type": "string" },
+          "evento_tipo": { "type": "string" },
+          "asunto": { "type": "string" },
+          "mensaje": { "type": "string" },
+          "estado": { "type": "string" },
+          "fecha_creacion": { "type": "string", "format": "date-time" },
+          "fecha_envio": { "type": ["string", "null"] },
+          "archivado": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="800 60 240 670"><defs><linearGradient id="skin" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#EAF4F8" /><stop offset="1" stop-color="#AFC8D7" /></linearGradient></defs>
+
+<g transform="translate(765,15) scale(.38 .62)">
+<path d="M293 124 Q400 95 507 124 Q576 137 605 225 L646 404 Q659 479 655 617 L646 852 Q640 974 607 1041 Q588 1087 520 1102 Q400 1119 280 1102 Q212 1087 193 1041 Q160 974 154 852 L145 617 Q141 479 154 404 L195 225 Q224 137 293 124Z" fill="url(#skin)" stroke="#4A6677" stroke-width="15" /><path d="M211 425 Q400 447 589 425 L567 555 Q400 574 233 555Z M233 810 Q400 836 567 810 L589 921 Q401 941 211 921Z" fill="#213B4E" stroke="#8AA9B9" stroke-width="14" /><rect x="233" y="558" width="335" height="245" rx="50" fill="#A6C5D4" stroke="#58798B" stroke-width="14" /></g>
+
+</svg>

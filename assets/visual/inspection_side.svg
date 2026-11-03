@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="30 35 720 360"><defs><linearGradient id="skin" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#EAF4F8" /><stop offset="1" stop-color="#AFC8D7" /></linearGradient></defs>
+
+<g transform="translate(30,35) scale(.53)"><path d="M95 460 Q103 408 156 398 L310 362 Q411 251 500 230 Q620 198 760 208 Q860 223 955 327 L1086 378 L1238 401 L1270 450 L1262 523 L1110 527 Q1105 425 1000 425 Q891 425 880 527 L465 527 Q460 425 355 425 Q251 425 245 527 L129 525Z" fill="url(#skin)" stroke="#4A6677" stroke-width="11" /><path d="M343 361 Q447 256 522 249 L681 234 V362Z M704 236 Q833 245 924 339 L957 365 H704Z" fill="#213B4E" stroke="#8AA9B9" stroke-width="11" /><circle cx="356" cy="524" r="86" fill="#142534" stroke="#D4E5EF" stroke-width="22" /><circle cx="1000" cy="524" r="86" fill="#142534" stroke="#D4E5EF" stroke-width="22" /></g>
+
+</svg>

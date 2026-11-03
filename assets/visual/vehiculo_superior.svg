@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" width="800" height="1200">
+<defs>
+ <linearGradient id="body" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#EFF7FC"/><stop offset=".32" stop-color="#A9C0CF"/><stop offset=".52" stop-color="#687E8E"/><stop offset=".7" stop-color="#DCE8EF"/><stop offset="1" stop-color="#516A7B"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#132B3C"/><stop offset=".53" stop-color="#365769"/><stop offset="1" stop-color="#091926"/></linearGradient>
+ <linearGradient id="hood" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6C8798"/><stop offset=".45" stop-color="#E6F2F8"/><stop offset=".55" stop-color="#F4F9FC"/><stop offset="1" stop-color="#667F90"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="25"/></filter>
+</defs>
+<!-- no diagnostic hotspots are embedded in this neutral vehicle drawing -->
+<ellipse cx="400" cy="640" rx="265" ry="500" fill="#000B16" opacity=".32" filter="url(#shadow)"/>
+<!-- wheel tires -->
+<g fill="#14212A" stroke="#536473" stroke-width="10"><rect x="118" y="300" width="73" height="197" rx="28"/><rect x="608" y="300" width="73" height="197" rx="28"/><rect x="118" y="777" width="73" height="188" rx="28"/><rect x="608" y="777" width="73" height="188" rx="28"/></g>
+<!-- body top -->
+<path d="M293 124 Q400 95 507 124 Q576 137 605 225 L646 404 Q659 479 655 617 L646 852 Q640 974 607 1041 Q588 1087 520 1102 Q400 1119 280 1102 Q212 1087 193 1041 Q160 974 154 852 L145 617 Q141 479 154 404 L195 225 Q224 137 293 124Z" fill="url(#body)" stroke="#D8EDF6" stroke-width="8"/>
+<!-- exterior perimeter lines -->
+<path d="M246 175 Q401 132 553 175" fill="none" stroke="#FFFFFF" stroke-width="9" opacity=".6"/>
+<path d="M176 385 Q168 530 175 826 M624 385 Q632 530 625 826" fill="none" stroke="#172F41" stroke-width="7" opacity=".5"/>
+<!-- hood and engine bay shape -->
+<path d="M230 220 Q398 177 570 220 L588 403 Q399 427 212 403Z" fill="url(#hood)" stroke="#48697D" stroke-width="5"/>
+<path d="M251 240 Q400 210 550 240 M227 378 Q401 410 573 378" fill="none" stroke="#EAF7FF" stroke-width="4" opacity=".55"/>
+<path d="M400 225 L400 397" stroke="#59788B" stroke-width="3" opacity=".35"/>
+<!-- windshield -->
+<path d="M211 425 Q400 447 589 425 L567 555 Q400 574 233 555Z" fill="url(#glass)" stroke="#BFE4F0" stroke-width="7"/>
+<path d="M250 448 L319 540 M540 448 L488 542" stroke="#B7D9E4" stroke-width="8" opacity=".25"/>
+<!-- roof -->
+<rect x="234" y="557" width="332" height="248" rx="66" fill="url(#hood)" stroke="#527488" stroke-width="7"/>
+<path d="M253 586 Q398 548 548 586 M253 776 Q400 812 547 776" fill="none" stroke="#F0FAFF" stroke-width="5" opacity=".65"/>
+<!-- rear glass -->
+<path d="M233 810 Q400 836 567 810 L589 921 Q401 941 211 921Z" fill="url(#glass)" stroke="#BFE4F0" stroke-width="7"/>
+<path d="M226 942 Q400 970 574 942 L585 1022 Q399 1062 215 1022Z" fill="url(#hood)" stroke="#58798B" stroke-width="5"/>
+<!-- lights front (front is top) -->
+<path d="M207 183 L310 169 L270 225 L194 231Z M593 183 L490 169 L530 225 L606 231Z" fill="#C6F4FF" stroke="#FFFFFF" stroke-width="4"/>
+<path d="M213 1043 L295 1059 L289 1091 L211 1081Z M587 1043 L505 1059 L511 1091 L589 1081Z" fill="#E7776F" stroke="#FFCFCE" stroke-width="3"/>
+<!-- mirrors -->
+<path d="M191 447 L130 422 L130 473 L190 488Z M609 447 L670 422 L670 473 L610 488Z" fill="#D3E8EF" stroke="#466071" stroke-width="6"/>
+<!-- front/rear grille -->
+<path d="M323 139 Q400 128 477 139" fill="none" stroke="#1A3445" stroke-width="15" stroke-linecap="round"/>
+<path d="M311 1081 Q400 1093 489 1081" fill="none" stroke="#243E4E" stroke-width="12" stroke-linecap="round"/>
+</svg>

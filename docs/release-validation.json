@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-03",
+  "artifact": "MotorDesk-Final-10MB.zip",
+  "bytes": 9912385,
+  "sha256": "45fb473b43078ba3ae0c11ec13b6783333220d99b51ee33856bbebeff3b1b128",
+  "flutter_tests_passed": 134,
+  "backend_tests_passed_sqlite": 237,
+  "postgres_concurrency_tests_passed": 3,
+  "known_dependency_vulnerabilities_reported": 0,
+  "lightweight_clean_venv": "passed",
+  "docker_isolated_workflow": "passed",
+  "final_payload_matches_tested_application": true,
+  "lock_matches_installed_versions": true,
+  "scope": "Local Windows and loopback Docker; Internet deployment and remaining master requirements are documented separately."
+}

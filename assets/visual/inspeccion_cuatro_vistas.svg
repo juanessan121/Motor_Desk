@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 850" width="1500" height="850">
+<rect width="1500" height="850" rx="30" fill="#151E2B"/>
+<defs><linearGradient id="skin" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#EAF4F8"/><stop offset="1" stop-color="#AFC8D7"/></linearGradient></defs>
+<!-- side elevation -->
+<g transform="translate(30,35) scale(.53)"><path d="M95 460 Q103 408 156 398 L310 362 Q411 251 500 230 Q620 198 760 208 Q860 223 955 327 L1086 378 L1238 401 L1270 450 L1262 523 L1110 527 Q1105 425 1000 425 Q891 425 880 527 L465 527 Q460 425 355 425 Q251 425 245 527 L129 525Z" fill="url(#skin)" stroke="#4A6677" stroke-width="11"/><path d="M343 361 Q447 256 522 249 L681 234 V362Z M704 236 Q833 245 924 339 L957 365 H704Z" fill="#213B4E" stroke="#8AA9B9" stroke-width="11"/><circle cx="356" cy="524" r="86" fill="#142534" stroke="#D4E5EF" stroke-width="22"/><circle cx="1000" cy="524" r="86" fill="#142534" stroke="#D4E5EF" stroke-width="22"/></g>
+<!-- top orthographic -->
+<g transform="translate(765,15) scale(.38 .62)">
+<path d="M293 124 Q400 95 507 124 Q576 137 605 225 L646 404 Q659 479 655 617 L646 852 Q640 974 607 1041 Q588 1087 520 1102 Q400 1119 280 1102 Q212 1087 193 1041 Q160 974 154 852 L145 617 Q141 479 154 404 L195 225 Q224 137 293 124Z" fill="url(#skin)" stroke="#4A6677" stroke-width="15"/><path d="M211 425 Q400 447 589 425 L567 555 Q400 574 233 555Z M233 810 Q400 836 567 810 L589 921 Q401 941 211 921Z" fill="#213B4E" stroke="#8AA9B9" stroke-width="14"/><rect x="233" y="558" width="335" height="245" rx="50" fill="#A6C5D4" stroke="#58798B" stroke-width="14"/></g>
+<!-- rear and front abstract outlines -->
+<g transform="translate(40,500)" fill="none" stroke="#B8CDD8" stroke-width="10"><path d="M100 230 Q105 90 180 77 Q310 31 440 77 Q515 90 520 230 Z"/><path d="M147 110 Q310 67 473 110 L457 174 Q310 189 163 174Z"/><circle cx="180" cy="220" r="40"/><circle cx="440" cy="220" r="40"/></g>
+<g transform="translate(805,500)" fill="none" stroke="#B8CDD8" stroke-width="10"><path d="M100 230 Q105 90 180 77 Q310 31 440 77 Q515 90 520 230 Z"/><path d="M147 110 Q310 67 473 110 L457 174 Q310 189 163 174Z"/><path d="M167 210 H453"/></g>
+</svg>

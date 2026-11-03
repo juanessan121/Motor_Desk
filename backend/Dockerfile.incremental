@@ -1,0 +1,11 @@
+# Actualización local de código sin reinstalar dependencias ni descargar otra
+# base de Python. BASE_IMAGE debe ser una imagen local conocida, con las mismas
+# requirements.lock que el repositorio. El Dockerfile principal sigue siendo
+# la receta de construcción desde cero.
+ARG BASE_IMAGE=motordesk-api-pre-flujos:20261022
+FROM ${BASE_IMAGE}
+WORKDIR /srv/api
+COPY app ./app
+COPY migrations ./migrations
+COPY scripts ./scripts
+COPY alembic.ini ./alembic.ini

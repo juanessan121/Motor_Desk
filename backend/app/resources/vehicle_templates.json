@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "templates": [{
+    "id": "sedan-neutral-v1", "version": 1,
+    "name": "Sedán neutral ilustrativo",
+    "disclaimer": "Silueta ilustrativa; no representa necesariamente tu modelo. Los puntos no detectan averías.",
+    "components": [
+      {"id":"motor","label":"Motor"},
+      {"id":"frenos_delanteros_izq","label":"Freno delantero izquierdo"},
+      {"id":"frenos_delanteros_der","label":"Freno delantero derecho"},
+      {"id":"sistema_electrico","label":"Sistema eléctrico"},
+      {"id":"transmision","label":"Transmisión"},
+      {"id":"suspension_trasera","label":"Suspensión trasera"},
+      {"id":"frenos_delanteros","label":"Frenos delanteros (conjunto)"},
+      {"id":"frenos_traseros","label":"Frenos traseros (conjunto)"},
+      {"id":"carroceria","label":"Carrocería"}
+    ],
+    "views": [
+      {"id":"vehicle_top","label":"Superior","asset":"assets/visual/vehiculo_superior.png","width":1200,"height":1800,"passport":true,
+       "hotspots":[{"componentId":"motor","xNormalized":0.5,"yNormalized":0.28},{"componentId":"frenos_delanteros_izq","xNormalized":0.25,"yNormalized":0.34},{"componentId":"frenos_delanteros_der","xNormalized":0.75,"yNormalized":0.34},{"componentId":"sistema_electrico","xNormalized":0.58,"yNormalized":0.23},{"componentId":"transmision","xNormalized":0.5,"yNormalized":0.48},{"componentId":"suspension_trasera","xNormalized":0.73,"yNormalized":0.77}]},
+      {"id":"vehicle_side","label":"Lateral","asset":"assets/visual/vehiculo_lateral.png","width":1200,"height":557,"passport":true,
+       "hotspots":[{"componentId":"motor","xNormalized":0.77,"yNormalized":0.58},{"componentId":"frenos_delanteros","xNormalized":0.716,"yNormalized":0.8},{"componentId":"frenos_traseros","xNormalized":0.25,"yNormalized":0.8},{"componentId":"transmision","xNormalized":0.5,"yNormalized":0.69},{"componentId":"carroceria","xNormalized":0.51,"yNormalized":0.51}]},
+      {"id":"inspection_side","label":"Inspección · lateral","asset":"assets/visual/inspection_side.svg","width":720,"height":360,"passport":false,"hotspots":[]},
+      {"id":"inspection_top","label":"Inspección · superior","asset":"assets/visual/inspection_top.svg","width":240,"height":670,"passport":false,"hotspots":[]},
+      {"id":"inspection_front","label":"Inspección · frontal","asset":"assets/visual/inspection_front.svg","width":470,"height":280,"passport":false,"hotspots":[]},
+      {"id":"inspection_rear","label":"Inspección · posterior","asset":"assets/visual/inspection_rear.svg","width":470,"height":280,"passport":false,"hotspots":[]}
+    ]
+  }]
+}

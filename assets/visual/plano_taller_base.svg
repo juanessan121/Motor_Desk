@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+<defs>
+ <pattern id="texture" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0 H0 V40" fill="none" stroke="#4E5F69" stroke-opacity=".17" stroke-width="2"/></pattern>
+ <pattern id="hatch" width="22" height="22" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><path d="M0 0 V22" stroke="#DDA750" stroke-opacity=".38" stroke-width="7"/></pattern>
+</defs>
+<rect width="1400" height="900" rx="36" fill="#151F2B"/>
+<rect x="31" y="31" width="1338" height="838" rx="20" fill="#2B3743" stroke="#788B97" stroke-width="7"/>
+<rect x="48" y="48" width="1304" height="804" rx="15" fill="url(#texture)"/>
+<!-- top three bays -->
+<g fill="#364451" stroke="#B4C5CC" stroke-opacity=".64" stroke-width="4">
+ <rect x="118" y="90" width="350" height="258" rx="15"/>
+ <rect x="525" y="90" width="350" height="258" rx="15"/>
+ <rect x="932" y="90" width="350" height="258" rx="15"/>
+ <rect x="118" y="546" width="350" height="258" rx="15"/>
+ <rect x="525" y="546" width="350" height="258" rx="15"/>
+ <rect x="932" y="546" width="350" height="258" rx="15"/>
+</g>
+<!-- service markers and guide bars --><g fill="#17222D" opacity=".72"><rect x="131" y="105" width="324" height="42" rx="8"/><rect x="538" y="105" width="324" height="42" rx="8"/><rect x="945" y="105" width="324" height="42" rx="8"/><rect x="131" y="747" width="324" height="42" rx="8"/><rect x="538" y="747" width="324" height="42" rx="8"/><rect x="945" y="747" width="324" height="42" rx="8"/></g>
+<!-- markings -->
+<g stroke="#E4B054" stroke-opacity=".75" stroke-width="7" stroke-dasharray="22 19" fill="none"><path d="M105 353 H1296 M105 541 H1296"/></g>
+<rect x="67" y="375" width="1266" height="144" rx="13" fill="#202D38" opacity=".75"/>
+<path d="M141 446 H1255" stroke="#D8E6ED" stroke-width="5" stroke-dasharray="28 24" opacity=".4"/>
+<!-- dynamic overlays (bay labels, car icons, occupancy) should be separate UI elements -->
+<g stroke="#96D8DA" stroke-width="3" fill="none" opacity=".6"><path d="M81 80 H128 V90 M1320 80 H1272 V90 M81 819 H128 V805 M1320 819 H1272 V805"/></g>
+<!-- entrance -->
+<path d="M650 858 H750" stroke="#54C6B9" stroke-width="12" stroke-linecap="round"/>
+</svg>

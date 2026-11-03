@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="885 520 470 280"><defs><linearGradient id="skin" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#EAF4F8" /><stop offset="1" stop-color="#AFC8D7" /></linearGradient></defs>
+
+<g transform="translate(805,500)" fill="none" stroke="#B8CDD8" stroke-width="10"><path d="M100 230 Q105 90 180 77 Q310 31 440 77 Q515 90 520 230 Z" /><path d="M147 110 Q310 67 473 110 L457 174 Q310 189 163 174Z" /><path d="M167 210 H453" /></g>
+</svg>

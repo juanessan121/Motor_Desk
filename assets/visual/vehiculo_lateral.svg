@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" width="1400" height="650">
+<defs>
+ <linearGradient id="metal" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#F6FDFF"/><stop offset=".24" stop-color="#AFC6D4"/><stop offset=".55" stop-color="#627F91"/><stop offset=".8" stop-color="#BFD3DF"/><stop offset="1" stop-color="#465F70"/></linearGradient>
+ <linearGradient id="windows" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#54778A"/><stop offset=".3" stop-color="#0C2636"/><stop offset="1" stop-color="#152D3B"/></linearGradient>
+ <radialGradient id="rim"><stop stop-color="#EDF5F7"/><stop offset=".44" stop-color="#7995A7"/><stop offset=".5" stop-color="#162B3A"/><stop offset=".8" stop-color="#4E6574"/><stop offset="1" stop-color="#12232D"/></radialGradient>
+ <filter id="shade" x="-30%" y="-50%" width="160%" height="200%"><feGaussianBlur stdDeviation="19"/></filter>
+</defs>
+<ellipse cx="698" cy="550" rx="610" ry="42" fill="#000B16" opacity=".28" filter="url(#shade)"/>
+<!-- rear left, front right, generic compact sedan -->
+<path d="M101 420 Q106 390 166 378 L319 343 Q402 236 502 193 Q574 161 751 158 Q880 168 972 277 L1061 331 L1207 352 Q1267 373 1280 415 L1286 474 Q1281 521 1233 529 L170 529 Q99 524 94 490Z" fill="url(#metal)" stroke="#D8EAF4" stroke-width="8"/>
+<!-- windows -->
+<path d="M344 332 Q416 236 503 208 Q587 179 675 181 L677 327Z" fill="url(#windows)" stroke="#D4EAF0" stroke-width="8"/>
+<path d="M701 182 Q829 187 930 285 L975 329 L703 329Z" fill="url(#windows)" stroke="#D4EAF0" stroke-width="8"/>
+<path d="M690 195 L690 341" stroke="#D8EAF0" stroke-width="14"/>
+<!-- doors -->
+<path d="M690 338 L691 517 M972 335 L1000 513" stroke="#3D5C70" stroke-width="6" opacity=".8"/>
+<path d="M367 352 L327 490 M1180 366 L1213 486" stroke="#506E7F" stroke-width="4"/>
+<path d="M431 383 L532 381 M755 382 L838 382" stroke="#D9EEF3" stroke-width="12" stroke-linecap="round"/>
+<path d="M197 392 Q401 370 634 374 L1178 388" fill="none" stroke="#FFFFFF" stroke-width="5" opacity=".33"/>
+<path d="M159 485 L1231 485" stroke="#26465B" stroke-width="4" opacity=".55"/>
+<!-- headlights + taillights -->
+<path d="M1209 376 L1275 401 L1265 430 L1212 415Z" fill="#EAFDFF" stroke="#FFFFFF" stroke-width="4"/>
+<path d="M104 408 L165 402 L163 443 L103 451Z" fill="#E88B81" stroke="#FFDFD5" stroke-width="4"/>
+<!-- wheels -->
+<g><circle cx="350" cy="519" r="111" fill="#14222B" stroke="#293A46" stroke-width="15"/><circle cx="350" cy="519" r="79" fill="url(#rim)" stroke="#D4E4EB" stroke-width="8"/><circle cx="1002" cy="519" r="111" fill="#14222B" stroke="#293A46" stroke-width="15"/><circle cx="1002" cy="519" r="79" fill="url(#rim)" stroke="#D4E4EB" stroke-width="8"/></g>
+<g stroke="#D1E5EE" stroke-width="10" stroke-linecap="round">
+<path d="M350 448 V591 M279 519 H421 M299 468 L401 570 M401 468 L299 570"/>
+<path d="M1002 448 V591 M931 519 H1073 M951 468 L1053 570 M1053 468 L951 570"/>
+</g><circle cx="350" cy="519" r="21" fill="#DCEAF1"/><circle cx="1002" cy="519" r="21" fill="#DCEAF1"/>
+</svg>

@@ -1,0 +1,189 @@
+{
+  "metadatos": {
+    "sistema": "MotorDesk",
+    "version": "1.0.0",
+    "fecha_exportacion": "2026-10-23T17:51:37.368898+00:00",
+    "taller_id": 1,
+    "nombre_taller": "Taller de prueba portable",
+    "generado_por": "admin"
+  },
+  "clientes": [
+    {
+      "id": 1,
+      "cedula_ruc": "PORTABLE-001",
+      "nombre_completo": "Cliente Sintético",
+      "email": "cliente.portable@example.com",
+      "telefono": "0990000000",
+      "whatsapp": "",
+      "direccion": "",
+      "acceso_portal": {
+        "tiene_acceso": true,
+        "estado": "pendiente_activacion",
+        "usuario": "cli-5c0ca020aa"
+      },
+      "canales_notificacion": {
+        "email_habilitado": true,
+        "telegram_habilitado": true,
+        "whatsapp_habilitado": true,
+        "telegram_chat_id": null,
+        "canal_preferido": "email"
+      }
+    }
+  ],
+  "vehiculos": [
+    {
+      "id": 1,
+      "placa": "POR-1234",
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "anio": 2020,
+      "vin": null,
+      "color": "No especificado",
+      "tipo_combustible": "gasolina",
+      "kilometraje": 1000,
+      "propietario": {
+        "cliente_id": 1,
+        "nombre": "Cliente Sintético",
+        "cedula_ruc": "PORTABLE-001"
+      }
+    }
+  ],
+  "mantenimientos": [
+    {
+      "orden_id": 1,
+      "codigo_orden": "OT-2026-0001",
+      "vehiculo": {
+        "id": 1,
+        "placa": "POR-1234",
+        "marca_modelo": "Toyota Corolla"
+      },
+      "cliente": {
+        "id": 1,
+        "nombre": "Cliente Sintético",
+        "cedula_ruc": "PORTABLE-001"
+      },
+      "tipo_mantenimiento": "preventivo",
+      "titulo": "Inspección portable",
+      "descripcion_problema": "Mantenimiento general programado",
+      "diagnostico_tecnico": "",
+      "costos": {
+        "mano_obra": 20.0,
+        "repuestos": 0.0,
+        "subtotal": 20.0,
+        "porcentaje_iva": 15.0,
+        "monto_iva": 3.0,
+        "total": 23.0,
+        "estado": "estimado"
+      },
+      "observaciones": {
+        "observaciones_vehiculo": null,
+        "observaciones_orden": "",
+        "motivo_retraso": null
+      },
+      "fechas": {
+        "creacion": "2026-10-23T17:51:37.305516+00:00",
+        "estimada_entrega": null,
+        "entrega_real": null
+      },
+      "actividades_incluidas": [
+        {
+          "id": 1,
+          "nombre": "Revisar frenos",
+          "sistema": "general",
+          "estado": "pending",
+          "notas_tecnicas": null,
+          "posicion": 1,
+          "requerido": true,
+          "mecanico_asignado": null
+        }
+      ]
+    }
+  ],
+  "seguimiento_estados": [
+    {
+      "orden_id": 1,
+      "codigo_orden": "OT-2026-0001",
+      "placa": "POR-1234",
+      "estado_actual": "in_progress",
+      "estado_academico": "recepcionado",
+      "etapa_operativa": "pending_authorization",
+      "es_activo": true,
+      "flujo_7_estados": [
+        {
+          "estado": "recepcionado",
+          "alcanzado": true,
+          "fecha": "2026-10-23T17:51:37.305516+00:00"
+        },
+        {
+          "estado": "diagnostico",
+          "alcanzado": false,
+          "fecha": null
+        },
+        {
+          "estado": "esperando_repuestos",
+          "alcanzado": false,
+          "fecha": null
+        },
+        {
+          "estado": "en_reparacion",
+          "alcanzado": false,
+          "fecha": null
+        },
+        {
+          "estado": "control_calidad",
+          "alcanzado": false,
+          "fecha": null
+        },
+        {
+          "estado": "listo_para_entrega",
+          "alcanzado": false,
+          "fecha": null
+        },
+        {
+          "estado": "entregado",
+          "alcanzado": false,
+          "fecha": null
+        }
+      ],
+      "historial_real": [
+        {
+          "estado_anterior": null,
+          "estado_nuevo": "in_progress",
+          "fecha": "2026-10-23T17:51:37.310241+00:00",
+          "usuario_id": 1,
+          "motivo": "Recepción"
+        }
+      ]
+    }
+  ],
+  "notificaciones": [
+    {
+      "id": 1,
+      "orden_id": null,
+      "destinatario": "cliente.portable@example.com",
+      "canal": "email",
+      "evento_tipo": "credentials",
+      "asunto": "Acceso a su taller",
+      "mensaje": "Acceso temporal omitido por seguridad",
+      "identificador_externo": null,
+      "estado": "pending",
+      "fecha_creacion": "2026-10-23T17:51:37.252234+00:00",
+      "fecha_envio": null,
+      "archivado": false
+    },
+    {
+      "id": 2,
+      "orden_id": 1,
+      "destinatario": "cliente.portable@example.com",
+      "canal": "email",
+      "evento_tipo": "order_created",
+      "asunto": "Recepción de vehículo",
+      "mensaje": "Estimado/a Cliente Sintético, confirmamos la recepción de su vehículo placa POR-1234 con fecha de ingreso 23/10/2026 17:51. Orden de trabajo N° OT-2026-0001. Servicio: Inspección portable.",
+      "identificador_externo": null,
+      "estado": "pending",
+      "fecha_creacion": "2026-10-23T17:51:37.310813+00:00",
+      "fecha_envio": null,
+      "archivado": false
+    }
+  ]
+}
